@@ -1,0 +1,8 @@
+{
+  "name": "",
+  "version": "",
+  "dependencies": {
+    "mongodb": "^2.2.33",
+    "mongoskin": "^2.1.0"
+  }
+}
