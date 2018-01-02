@@ -3,6 +3,7 @@
   "version": "",
   "dependencies": {
     "mongodb": "^2.2.33",
+    "mongoose": "^4.5.9",
     "mongoskin": "^2.1.0"
   }
 }
