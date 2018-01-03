@@ -1,23 +1,23 @@
-const mongoose = require('mongoose');
+const express = require('express');
+const bodyParser = require('body-parser');
 
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/ToDoApp');
+const {mongoose} = require('./DB/mongoose');
+const {user} = require('./Models/User');
+const {Todo} = require('./Models/ToDo');
 
-var users = mongoose.model('users', {
-    email : {
-        type : String,
-        required: true,
-        minlength: 1,
-        trim : true
-    }
-});
+var app = express();
 
-var newUser = new users({
-    email : 'aritrabanerjee97@gmail.com'
-});
+app.use(bodyParser.json());
 
-newUser.save().then((doc) => {
-        console.log(doc);
-}, (e) => {
-    console.log(e);
+app.post('/todos', (req, res) => {
+   var newtodo = new Todo({
+       text : req.body.text
+   });
+   newtodo.save().then((docs) => {
+       res.send(docs);
+   }, (e) => {
+       res.status(400).send(e);
+   });
 })
+
+app.listen(3000, () =>{console.log('Started at port 3000')});
