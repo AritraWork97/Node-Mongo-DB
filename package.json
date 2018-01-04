@@ -1,6 +1,12 @@
 {
   "name": "",
   "version": "",
+  "scripts":{
+    "start": "node server/server.js"
+  },
+  "engines": {
+    "node" : "9.1.0"
+  },
   "dependencies": {
     "body-parser": "^1.18.2",
     "expect": "^22.0.3",
