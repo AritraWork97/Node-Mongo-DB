@@ -1,16 +1,17 @@
 {
   "name": "",
   "version": "",
-  "scripts":{
+  "scripts": {
     "start": "node server/server.js"
   },
   "engines": {
-    "node" : "9.1.0"
+    "node": "9.1.0"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
     "expect": "^22.0.3",
     "express": "^4.16.2",
+    "lodash": "^4.17.4",
     "mocha": "^4.1.0",
     "mongodb": "^2.2.33",
     "mongoose": "^4.5.9",
