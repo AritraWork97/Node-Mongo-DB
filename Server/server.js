@@ -90,4 +90,14 @@ app.patch('/todos/:id', (req, res) => {
     });
 });
 
+app.post('/users', (req, res) => {
+    var id = _.pick(req.body,['email', 'password']);
+    var users = new user(id);
+    users.save().then((result) => {
+        res.send(result);
+    }).catch((e) => {
+        res.status(400).send(e);
+    });
+});
+
 app.listen(port, () =>{console.log(`Started at port ${port}`)});

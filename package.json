@@ -17,6 +17,7 @@
     "mongoose": "^4.5.9",
     "mongoskin": "^2.1.0",
     "nodemon": "^1.14.7",
-    "supertest": "^3.0.0"
+    "supertest": "^3.0.0",
+    "validator": "^9.2.0"
   }
 }
